@@ -21,222 +21,55 @@ public class Main {
                 System.out.println("Enter car model: ");
                 String vehicleModel = scan.next();
 
-                do{
-                    System.out.println("Enter engine size: ");
-                    n = scan.next();
-                    try{
-                    engineSize = Integer.parseInt(n);
-                    flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                engineSize = protectionMethod("Enter engine size: ",scan);
 
-                do{
-                    System.out.println("Enter horse powers: ");
-                    n = scan.next();
-                    try{
-                        horsePowers = Integer.parseInt(n);
-                        flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                horsePowers = protectionMethod("Enter horse powers: ", scan);
 
-                String engineType = "";
-
-                boolean condition = true;
-                while(condition) {
-                    System.out.println("Enter engine type: ");
-                    engineType = scan.next();
-                    switch (engineType) {
-                        case "electric":
-                            condition = false;
-                            break;
-                        case "diesel":
-                            condition = false;
-                            break;
-                        case "gasoline":
-                            condition = false;
-                            break;
-                        default:
-                            System.out.println("Wrong entry for engine type. Available options: 'electric', 'diesel' and 'gasoline'. Please try again.");
-                    }
-                }
+                String engineType = engineTypeMethod(scan);
 
                 int doorsNumbers = 0;
-                do{
-                    System.out.println("Enter number of doors: ");
-                    n = scan.next();
-                    try{
-                       doorsNumbers = Integer.parseInt(n);
-                        flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                doorsNumbers = protectionMethod("Enter number of doors: ", scan);
 
                 int productionYear = 0;
-                do{
-                    System.out.println("Enter production year of the car: ");
-                    n = scan.next();
-                    try{
-                        productionYear = Integer.parseInt(n);
-                        flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                productionYear = protectionMethod("Enter production year of the car: ", scan);
 
                 Vehicle v1 = new Car(vehicleBrand, vehicleModel, engineSize, horsePowers, engineType, doorsNumbers, productionYear);
                 listOfVehicles.add(v1);
 
             } else if (vehicleType.equalsIgnoreCase("2")) {
-                System.out.println("Enter car brend: ");
+                System.out.println("Enter motorcycle brend: ");
                 String vehicleBrand = scan.next();
 
                 System.out.println("Enter motorcycle model: ");
                 String vehicleModel = scan.next();
 
-                do{
-                    System.out.println("Enter engine size: ");
-                    n = scan.next();
-                    try{
-                        engineSize = Integer.parseInt(n);
-                        flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                engineSize = protectionMethod("Enter engine size: ",scan);
 
-                do{
-                    System.out.println("Enter horse powers: ");
-                    n = scan.next();
-                    try{
-                        horsePowers = Integer.parseInt(n);
-                        flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                horsePowers = protectionMethod("Enter horse powers: ", scan);
 
-                String engineType = "";
-
-                boolean condition = true;
-                while(condition) {
-                    System.out.println("Enter engine type: ");
-                    engineType = scan.next();
-                    switch (engineType) {
-                        case "electric":
-                            condition = false;
-                            break;
-                        case "diesel":
-                            condition = false;
-                            break;
-                        case "gasoline":
-                            condition = false;
-                            break;
-                        default:
-                            System.out.println("Wrong entry for engine type. Available options: 'electric', 'diesel' and 'gasoline'. Please try again.");
-                    }
-                }
+                String engineType = engineTypeMethod(scan);
 
                 int productionYear = 0;
-                do{
-                    System.out.println("Enter production year of the motorcycle: ");
-                    n = scan.next();
-                    try{
-                        productionYear = Integer.parseInt(n);
-                        flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                productionYear = protectionMethod("Enter production year of the motorcycle: ", scan);
 
                 Vehicle v2 = new Motorcycle(vehicleBrand, vehicleModel, engineSize, horsePowers, engineType, productionYear);
                 listOfVehicles.add(v2);
 
             } else if (vehicleType.equalsIgnoreCase("3")) {
-                System.out.println("Enter car brend: ");
+                System.out.println("Enter truck brend: ");
                 String vehicleBrand = scan.next();
 
                 System.out.println("Enter truck model: ");
                 String vehicleModel = scan.next();
 
-                do{
-                    System.out.println("Enter engine size: ");
-                    n = scan.next();
-                    try{
-                        engineSize = Integer.parseInt(n);
-                        flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                engineSize = protectionMethod("Enter engine size: ", scan);
 
-                do{
-                    System.out.println("Enter horse powers: ");
-                    n = scan.next();
-                    try{
-                        horsePowers = Integer.parseInt(n);
-                        flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                horsePowers = protectionMethod("Enter horse powers: ", scan);
 
-                String engineType = "";
-
-                boolean condition = true;
-                while(condition) {
-                    System.out.println("Enter engine type: ");
-                    engineType = scan.next();
-                    switch (engineType) {
-                        case "electric":
-                            condition = false;
-                            break;
-                        case "diesel":
-                            condition = false;
-                            break;
-                        case "gasoline":
-                            condition = false;
-                            break;
-                        default:
-                            System.out.println("Wrong entry for engine type. Available options: 'electric', 'diesel' and 'gasoline'. Please try again.");
-                    }
-                }
+                String engineType = engineTypeMethod(scan);
 
                 int trailers = 0;
-                do{
-                    System.out.println("Enter number of trailers: ");
-                    n = scan.next();
-                    try{
-                        trailers = Integer.parseInt(n);
-                        flag = false;
-                    }
-                    catch(NumberFormatException e){
-                        System.out.println("Enter only integer value. " );
-                        flag = true;
-                    }
-                }while(flag);
+                trailers = protectionMethod("Enter number of trailers: ", scan);
 
                 Vehicle v3 = new Truck(vehicleBrand, vehicleModel, engineSize, horsePowers, engineType, trailers);
                 listOfVehicles.add(v3);
@@ -271,4 +104,43 @@ public class Main {
         System.out.println("Amount for registration for " + listOfVehicles.size() + " vehicle/vehicles is: " + sum);
 
     }
+    public static int protectionMethod(String txt, Scanner scan){
+        boolean flag;
+        int returnValue = 0;
+        do{
+            System.out.println(txt);
+            String n = scan.next();
+            try{
+                returnValue = Integer.parseInt(n);
+                flag = false;
+            }
+            catch(NumberFormatException e){
+                System.out.println("Enter only integer value. " );
+                flag = true;
+            }
+        }while(flag);
+        return returnValue;
+    }
+     public static String engineTypeMethod(Scanner scan){
+         boolean condition = true;
+         String returnEngineType = " ";
+         while(condition) {
+             System.out.println("Enter engine type: ");
+             returnEngineType = scan.next();
+             switch (returnEngineType) {
+                 case "electric":
+                     condition = false;
+                     break;
+                 case "diesel":
+                     condition = false;
+                     break;
+                 case "gasoline":
+                     condition = false;
+                     break;
+                 default:
+                     System.out.println("Wrong entry for engine type. Available options: 'electric', 'diesel' and 'gasoline'. Please try again.");
+             }
+         }
+         return returnEngineType;
+     }
 }

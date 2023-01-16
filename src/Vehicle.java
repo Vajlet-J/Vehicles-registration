@@ -59,7 +59,7 @@ abstract class Vehicle {
     @Override
     public String toString() {
         return  vehicleBrand + "\n" +
-                vehicleModel + "\n" +
+                "vehicle model: " + vehicleModel + "\n" +
                 "engine size: " + engineSize + "\n" +
                 "horse powers: " + horsePowers + "\n" +
                 "engine type: " + engineType + "\n";
