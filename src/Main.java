@@ -8,7 +8,6 @@ public class Main {
         String n;
         int engineSize = 0;
         int horsePowers = 0;
-        boolean flag;
 
         while (true) {
             System.out.println("Choose vehicle type: " + "\n" + "Enter 1 for Car." + "\n" + "Enter 2 for Motorcycle." + "\n" + "Enter 3 for Truck.");
