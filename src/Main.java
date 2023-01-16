@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         ArrayList<Vehicle> listOfVehicles = new ArrayList<Vehicle>();
-        String n;
         int engineSize = 0;
         int horsePowers = 0;
 
