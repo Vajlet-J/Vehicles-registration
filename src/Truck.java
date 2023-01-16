@@ -1,8 +1,8 @@
 public class Truck extends Vehicle{
     private int trailers;
 
-    public Truck(String vehicleModel, int engineSize, int horsePowers, String engineType, int trailers) {
-        super(vehicleModel, engineSize, horsePowers, engineType);
+    public Truck(String vehicleBrand, String vehicleModel, int engineSize, int horsePowers, String engineType, int trailers) {
+        super(vehicleBrand, vehicleModel, engineSize, horsePowers, engineType);
         this.trailers = trailers;
     }
 

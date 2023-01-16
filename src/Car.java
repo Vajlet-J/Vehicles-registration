@@ -5,8 +5,8 @@ public class Car extends Vehicle {
     private int productionYear;
     private int currentYear = Year.now().getValue();
 
-    public Car(String vehicleModel, int engineSize, int horsePowers, String engineType, int doorsNumber, int productionYear) {
-        super(vehicleModel, engineSize, horsePowers, engineType);
+    public Car(String vehicleBrand, String vehicleModel, int engineSize, int horsePowers, String engineType, int doorsNumber, int productionYear) {
+        super(vehicleBrand, vehicleModel, engineSize, horsePowers, engineType);
         this.doorsNumber = doorsNumber;
         this.productionYear = productionYear;
     }

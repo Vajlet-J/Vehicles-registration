@@ -1,14 +1,25 @@
 abstract class Vehicle {
     private String vehicleModel;
+
+    private String vehicleBrand;
     private int engineSize;
     private int horsePowers;
     private String engineType;
 
-    public Vehicle(String vehicleModel, int engineSize, int horsePowers, String engineType) {
+    public Vehicle(String vehicleBrand, String vehicleModel, int engineSize, int horsePowers, String engineType) {
+        this.vehicleBrand = vehicleBrand;
         this.vehicleModel = vehicleModel;
         this.engineSize = engineSize;
         this.horsePowers = horsePowers;
         this.engineType = engineType;
+    }
+
+    public String getVehicleBrand() {
+        return vehicleBrand;
+    }
+
+    public void setVehicleBrand(String vehicleBrand) {
+        this.vehicleBrand = vehicleBrand;
     }
 
     public String getVehicleModel() {
@@ -47,7 +58,8 @@ abstract class Vehicle {
 
     @Override
     public String toString() {
-        return  vehicleModel + "\n" +
+        return  vehicleBrand + "\n" +
+                vehicleModel + "\n" +
                 "engine size: " + engineSize + "\n" +
                 "horse powers: " + horsePowers + "\n" +
                 "engine type: " + engineType + "\n";
